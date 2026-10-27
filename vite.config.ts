@@ -47,6 +47,8 @@ function devMediaWriter(): Plugin {
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   return {
+    // '/' for a root domain; '/repo-name/' for GitHub project pages (set VITE_BASE in the deploy workflow).
+    base: env.VITE_BASE || '/',
     plugins: [react(), seoHead(env.VITE_SITE_URL ?? ''), devMediaWriter()],
     build: {
       target: 'es2022',

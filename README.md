@@ -20,6 +20,11 @@ npm run preview    # serve dist/ at http://localhost:4173
 Deploy `dist/` to any static host (Netlify, Vercel, Cloudflare Pages, GitHub Pages…).
 Set the environment variables from `.env.example` in the host's build settings.
 
+**GitHub Pages:** `.github/workflows/static.yml` builds the site and publishes `dist/` (Settings → Pages →
+Source: "GitHub Actions"). For a project page (`https://user.github.io/repo/`) it sets `VITE_BASE=/repo/` and
+`VITE_SITE_URL=https://user.github.io/repo/`; for a root site (`user.github.io` repo or custom domain) use
+`VITE_BASE=/`. Media paths in the content files are written as `/media/…` — the base path is added automatically.
+
 ---
 
 ## Updating content
