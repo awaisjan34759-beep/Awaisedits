@@ -1,0 +1,8 @@
+node_modules
+dist
+dist-ssr
+.env
+.env.*.local
+*.log
+# Synthetic QA clips (regenerate with scripts/qa/make-fixtures.mjs)
+dev-fixtures/*.webm
